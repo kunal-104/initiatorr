@@ -1,0 +1,42 @@
+.custom-image-tool-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.resizable-image {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+}
+
+.resize-handle {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  position: absolute;
+}
+
+.top-left {
+  top: -5px;
+  left: -5px;
+  cursor: nwse-resize;
+}
+
+.top-right {
+  top: -5px;
+  right: -5px;
+  cursor: nesw-resize;
+}
+
+.bottom-left {
+  bottom: -5px;
+  left: -5px;
+  cursor: nesw-resize;
+}
+
+.bottom-right {
+  bottom: -5px;
+  right: -5px;
+  cursor: nwse-resize;
+}

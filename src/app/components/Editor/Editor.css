@@ -1,0 +1,50 @@
+.ce-block__content{
+    /* width: 100%; */
+    /* display: block;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap; */
+    /* padding: 10px; */
+    /* font-size:xx-large; */
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-wrap: wrap;
+    min-width: 50vw; */
+    /* border: 1px solid red; */
+}
+
+.ce-paragraph{
+    /* border: 1px solid blue; */
+    /* min-width: 70vw; */
+    /* border: 1px solid blue; */
+    /* margin-left: -300px; */
+    /* height: 63vh; */
+
+}
+.ce-block{
+    /* display: flex;
+    align-items: center;
+    justify-content: flex-start; */
+    /* overflow-y: scroll; */
+    overflow-x:hidden;
+    /* height: 63vh; */
+}
+h1{
+    font-size: xx-large;
+}
+h2{
+    font-size: x-large;
+}
+h3{
+    font-size: larger;
+}
+h4{
+    font-size: large;
+}
+h5{
+    font-size: medium;
+}
+h6{
+    font-size: small;
+}

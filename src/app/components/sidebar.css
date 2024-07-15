@@ -1,0 +1,42 @@
+
+
+.ijkl:hover .b{
+  opacity: 1;
+}
+
+
+.ab:hover .a{
+  color: #808080;
+}
+.ab:hover .b{
+  color: #808080;
+}
+.efgh .b {
+  opacity: 10;
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+
+
+
+/* .abcd .b {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+.ijkl:hover .b{
+    opacity: 1;
+  }
+
+
+.ab:hover .a{
+    color: white;
+}
+.ab:hover .b{
+    color: white;
+} */
+
+/* .efgh:hover .kunal{
+  transition: opacity 0.9s ease-in-out;
+} */

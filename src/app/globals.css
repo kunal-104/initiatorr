@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* styles/globals.css */
+
+/* Define color variables */
+:root {
+  --color-primary: #0857de;
+  --color-secondary: #8fdd67;
+  --color-text-primary: #323e4a;
+  --color-text-secondary: #7b8795;
+  --color-accent: #5b85d9;
+  --color-danger: #e9635e;
+  --color-success: #59c857;
+  --color-warning: #f5c24b;
+  --color-muted: #52606d;
+  --color-shade: #f6f7fb;
+  --color-dark: #222222;
+  --color-maincolor: #2C2A7E;
+  --color-bodybg: #1A1A1A;
+  /* --color-bodybg: #EAF9FF; */
+  --color-white: #FFFFFF;
+  --color-secandary: #FFA05D;
+  --color-grey: #777777;
+  --color-lightprimary: #BCBAFF;
+  --color-lightsecondary: #FFE3D0;
+}
+
+body {
+  /* background-color: #e2f6ff; */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100vh;
+  /* overflow: hidden; */
+}
+.Card-root {
+  background-color: #1A1A1A !important; /* Dark Gray */
+}
+/* Heading styles */
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Other text elements */
+a,
+p,
+span,
+li {
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body,
+#__next {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Media queries for responsive design */
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+.bg-accent {
+  background-color: var(--color-accent);
+}
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-darkgray {
+  color: var(--color-text-primary);
+}
+.text-lightgray {
+  color: var(--color-text-secondary);
+}
+.text-danger {
+  color: var(--color-danger);
+}
+
+.text-success {
+  color: var(--color-success);
+}
+
+.text-warning {
+  color: var(--color-warning);
+}
+
+.text-muted {
+  color: var(--color-muted);
+}
+
+.text-shade {
+  color: var(--color-shade);
+}
+
+.dark {
+  color: var(--color-dark);
+}
+.bgdark{
+  background-color: var(--color-dark);
+}
+
+.maincolor{
+  color: var(--color-maincolor);
+}
+.bgmaincolor{
+  background-color: var(--color-maincolor);
+}
+
+.bodybg{
+  color: var(--color-bodybg);
+}
+.bgbodybg{
+  background-color: var(--color-bodybg);
+}
+
+.white{
+  color: var( --color-white);
+}
+.bgwhite{
+  background-color: var( --color-white);
+}
+
+.secandary{
+  color: var(--color-secandary);
+}
+.bgsecandary{
+  background-color: var(--color-secandary);
+}
+.grey{
+  color: var(--color-grey);
+}
+.bggrey{
+  background-color: var(--color-grey);
+}
+
+.lightprimary{
+  color: var(--color-lightprimary);
+}
+.bglightprimary{
+  background-color: var(--color-lightprimary);
+}
+
+.lightsecondary{
+  color: var(--color-lightsecondary);
+}
+.bglightsecondary{
+  background-color: var(--color-lightsecondary);
+}
