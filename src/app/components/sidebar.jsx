@@ -20,12 +20,12 @@ const Sidebar = ({ Links = [] }) => {
     <div className="fixed bottom-8 left-4 flex z-1111 sm:hidden">
       <MenuButton Links={Links} />
     </div>
-    <div className="look ">
+    <div className="look">
       <div
         style={{ height: "auto", overflow: "hidden" }}
         className="peer efgh fixed z-10  bg-sidebarbg ml-5 mt-5 mr-5 rounded-3xl w-20 hover:w-64 space-y-6 py-5 px-2 hover:px-5 inset-y-0 left-0 transition-all transform -translate-x-96 sm:relative sm:translate-x-0 duration-300 ease-in-out group"
       >
-        <div className="xyz flex items-center justify-center space-x-2 px-4">
+        <div className="xyz flex items-center justify-center space-x-2 px-4 bird">
           <Image
             src={PT}
             width={74}

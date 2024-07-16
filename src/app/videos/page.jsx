@@ -368,7 +368,7 @@ const Videos = () => {
             </div>
           )}
           <div>
-            {user ? (
+            {(user && (Object.keys(user).length !== 0))  ? (
               <Button
                 onClick={() => {
                   router.push("/videos/addVideo");

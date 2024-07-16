@@ -10,18 +10,19 @@ const initialFakeData = {
   user: null,
 };
 
-export const ContentProvider = ({ children, user }) => {
+export const ContentProvider = ({ children, User}) => {
 const [content, setContent] = useState(initialFakeData);
 const [num, setNum] = useState(1);
 const [selected, setSelected] = useState("blog");
 const [loading, setLoading] = useState(false);
 const [searchTerm, setSearchTerm] = useState("");
 const [results, setResults] = useState([]);
+const [user, setUser] = useState(User);
 const iframeRefs = useRef([]);
 
 
   useEffect(() => {
-    if (user) {
+    if (user && (Object.keys(user).length !== 0)) {
       setContent((prevContent) => ({ ...prevContent, user: user }));
 
       // API call to check if user exists and update or create the user
@@ -50,9 +51,12 @@ const iframeRefs = useRef([]);
         setNum(num+1);
       }
     }
-  }, [user]);
+  }, [user
 
-  const renderDescription = (blocks, height) => {
+    
+  ]);
+
+  const RenderDescription = (blocks, height) => {
     if (!blocks || !Array.isArray(blocks)) {
       return null; // Return null or a fallback UI when blocks is undefined or not an array
     }
@@ -159,11 +163,11 @@ const iframeRefs = useRef([]);
       articles: articles,
     }));
   };
-  const addBlog = async (newBlog) => {
-    setContent((prevContent) => ({
-      ...prevContent,
-      blogs: [...prevContent.blogs, newBlog],
-    }));
+  const AddBlog = async (newBlog) => {
+    // setContent((prevContent) => ({
+    //   ...prevContent,
+    //   blogs: [...prevContent.blogs, newBlog],
+    // }));
     try {
       const response = await fetch('/api/blogs', {
         method: 'POST',
@@ -195,11 +199,11 @@ const iframeRefs = useRef([]);
     }));
   };
 
-  const addArticle = async (newArticle) => {
-    setContent((prevContent) => ({
-      ...prevContent,
-      articles: [...prevContent.articles, newArticle],
-    }));
+  const AddArticle = async (newArticle) => {
+    // setContent((prevContent) => ({
+    //   ...prevContent,
+    //   articles: [...prevContent.articles, newArticle],
+    // }));
     try {
       const response = await fetch('/api/articles', {
         method: 'POST',
@@ -231,7 +235,7 @@ const iframeRefs = useRef([]);
     }));
   };
 
-  const addVideo = async (newVideo) => {
+  const AddVideo = async (newVideo) => {
     // setContent((prevContent) => ({
     //   ...prevContent,
     //   videos: [...prevContent.videos, newVideo],
@@ -274,13 +278,14 @@ const iframeRefs = useRef([]);
         setBlogs,
         setArticles,
         setVideos,
-        addBlog,
+        AddBlog,
         removeBlog,
-        addArticle,
+        AddArticle,
         removeArticle,
-        addVideo,
+        AddVideo,
         removeVideo,
         user,
+        setUser,
         selected,
         setSelected,
         searchTerm,
@@ -289,7 +294,7 @@ const iframeRefs = useRef([]);
         setResults,
         loading,
         setLoading,
-        renderDescription,
+        RenderDescription,
       }}
     >
       {children}

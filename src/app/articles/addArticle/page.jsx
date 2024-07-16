@@ -5,6 +5,7 @@ import {
   CardBody,
   CardFooter,
 } from "@nextui-org/react";
+import dynamic from 'next/dynamic';
 import React, { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@nextui-org/react";
@@ -17,11 +18,12 @@ import {
   Chip,
 
 } from "@nextui-org/react";
-import Editor from "../../components/Editor/Editor";
+// import Editor from "../../components/Editor/Editor";
 import { useContent } from "../../contexts/ContentContext";
-
+// Dynamic import of the Editor component with SSR disabled
+const Editor = dynamic(() => import("../../components/Editor/Editor"), { ssr: false });
 const AddArticle = () => {
-  const { addArticle, user } = useContent();
+  const { AddArticle, user } = useContent();
   const editorInstanceRef = useRef(null);
 
   const [categories, setCategories] = React.useState(new Set(["Education"]));
@@ -41,9 +43,9 @@ const AddArticle = () => {
   );
 
   const handleTitleChange = (event) => {
-    if(user){
+    if(user && (Object.keys(user).length !== 0) ){
       setTitle(event.target.value);
-    }else if(!user){
+    }else {
       alert("you are not loggedIn");
       router.push("/");
     }
@@ -93,7 +95,7 @@ const AddArticle = () => {
         authorName: user.given_name,
       };
       console.log('New article:', newArticle);
-      addArticle(newArticle);
+      AddArticle(newArticle);
       // router.back();
       router.push("/articles")
       setIsSaving(false); // Reset the saving state

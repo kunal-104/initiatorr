@@ -17,7 +17,7 @@ const Links = [
   // { name: 'Categories', href: '/categories', icon: FaUserDoctor },
   { name: 'Articles', href: '/articles', icon: MdArticle },
   { name: 'Videos', href: '/videos', icon: RiYoutubeFill },
-  { name: 'Dashboard', href: '/dashboard', icon: MdSpaceDashboard },
+  // { name: 'Dashboard', href: '/dashboard', icon: MdSpaceDashboard },
 
   // Add more Links as needed
 ];

@@ -39,7 +39,7 @@ const Home = () => {
     content,
     selected,
     setSelected,
-    renderDescription,
+    RenderDescription,
     searchTerm,
     results,
     loading,
@@ -64,7 +64,7 @@ const Home = () => {
     }
   }, [results]);
   const handleSeeMore = (blog) => {
-    setSelectedDesc(renderDescription(blog.description, '320'));
+    setSelectedDesc(RenderDescription(blog.description, '320'));
     setSelectedContent(blog);
     onOpen();
   };
@@ -178,7 +178,7 @@ const Home = () => {
                                 <i>
                                   <b>Blog Description: </b>
                                 </i>{" "}
-                                {renderDescription(blog.description)}
+                                {RenderDescription(blog.description)}
                               </div>
                             </CardBody>
                             <CardFooter className="flex justify-between items-center p-4">
@@ -258,7 +258,7 @@ const Home = () => {
                                 <i>
                                   <b>Article Description: </b>
                                 </i>{" "}
-                                {renderDescription(article.description)}
+                                {RenderDescription(article.description)}
                               </div>
                             </CardBody>
                             <CardFooter className="flex justify-between items-center p-4">
@@ -336,7 +336,7 @@ const Home = () => {
                         <CardBody className="overflow-hidden">
                           <div className="p-2">
                             <div className="video-wrapper">
-                              {renderDescription(video.description)}
+                              {RenderDescription(video.description)}
                             </div>
                           </div>
                         </CardBody>

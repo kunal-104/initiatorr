@@ -22,7 +22,7 @@ import {
 import { useContent } from "../contexts/ContentContext";
 
 const ChatLikeContainer = () => {
-  const { user } = useContent();
+  const { user, setUser } = useContent();
 
   // const session = useSession();
   // console.log("session", session);
@@ -47,7 +47,7 @@ const ChatLikeContainer = () => {
 
   return (
     <div className="relative">
-      {user ? (
+      {(user && (Object.keys(user).length !== 0))  ? (
         <div className="flex items-center">
           <Button
             className="flex items-center bg-bodybg h-12"
@@ -89,7 +89,7 @@ const ChatLikeContainer = () => {
         ref={containerRef}
         className={`bg-sidebarbg container ${isVisible ? "visible" : "hidden"}`}
       >
-        {user ? (
+        {(user && (Object.keys(user).length !== 0)) ? (
           <><div className="flex flex-col gap-2">
             <Link href="/MyProfile">
               <div onClick={() => setIsVisible(false)} className="menu-item">
@@ -104,6 +104,7 @@ const ChatLikeContainer = () => {
             <LogoutLink><div
               onClick={() => {
                 setIsVisible(false);
+                setUser({});
               }}
               className="menu-item"
             >

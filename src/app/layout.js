@@ -44,14 +44,17 @@ export const viewport = {
 export default async function RootLayout({ children
   // , session
  }) {
+  let User={};
   const {getUser} = getKindeServerSession();
-  const user = await getUser();
+  User = await getUser();
 
-console.log('userLayout',user);
+console.log('userLayout',User);
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ContentProvider user={user}>
+        <ContentProvider
+         User={User}
+         >
           <Provider>{children}</Provider>
         </ContentProvider>
       </body>

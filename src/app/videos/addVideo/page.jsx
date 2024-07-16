@@ -19,12 +19,14 @@ import {
   Chip,
   
 } from "@nextui-org/react";
-import VideoEditor from "@/app/components/Editor/VideoEditor";
 import { useContent } from "../../contexts/ContentContext";
-
+import dynamic from 'next/dynamic';
+// import VideoEditor from "@/app/components/Editor/VideoEditor";
+// Dynamic import of the Editor component with SSR disabled
+const VideoEditor = dynamic(() => import("../../components/Editor/VideoEditor"), { ssr: false });
 
 const AddVideo = () => {
-  const { addVideo, user } = useContent();
+  const { AddVideo, user } = useContent();
   const videoEditorInstanceRef = useRef(null);
 
 
@@ -47,9 +49,9 @@ const AddVideo = () => {
   );
 
   const handleTitleChange = (event) => {
-    if(user){
+    if(user && (Object.keys(user).length !== 0)){
       setTitle(event.target.value);
-    }else if(!user){
+    }else {
       alert("you are not loggedIn");
       router.push("/");
     }
@@ -168,7 +170,7 @@ const handleSaveVideo = async () => {
         authorName: user.given_name
       };
       console.log('New Video:', newVideo);
-      addVideo(newVideo);
+      AddVideo(newVideo);
       router.push('/videos/');
       setIsSaving(false); // Reset the saving state
     }

@@ -301,7 +301,7 @@ const articlesLink = Links.find(link => link.name === 'Articles');
 
           </div>)}
           <div>
-            {user ? 
+            {user &&(Object.keys(user).length !== 0)  ? 
             
             <Button
               onClick={() => router.push("/articles/addArticle")}

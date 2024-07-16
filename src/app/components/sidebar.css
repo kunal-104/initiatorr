@@ -16,6 +16,19 @@
   transition: opacity 0.3s ease-in-out;
 }
 
+/* Define the initial styles for your element */
+.bird {
+  background-color: #808080; /* Initial background color */
+  border-radius: 20px; /* Initial border radius */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Define the hover effect */
+.bird:hover {
+  background-color: #A6A6A6; /* Very light pink background color */
+  border-color: #ffcccc; /* Light pink border color */
+  box-shadow: 0 0 10px #ffcccc, 0 0 20px #ffcccc, 0 0 30px #ffcccc; /* Shining shadow effect */
+}
 
 
 
